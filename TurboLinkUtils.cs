@@ -44,7 +44,7 @@ namespace protoc_gen_turbolink
             var words = fileName.Split(new[] { "-", "_", " " }, StringSplitOptions.RemoveEmptyEntries);
             return string.Join(string.Empty, MakeCamelStringArray(words));
         }
-        public static string GetMessageName(string grpcName, string prefix="FGrpc")
+        public static string GetMessageName(string grpcName, string prefix="F")
         {
             //eg.  ".Time.NowResponse"  -> "FGrpcTimeNowResponse"
             //eg.  "authzed.api.v1.CheckRequest" => "FGrpcAuthzedApiV1CheckRequest"
@@ -85,7 +85,7 @@ namespace protoc_gen_turbolink
                 case FieldDescriptorProto.Types.Type.Bytes:
                     ueType += "FBytes"; break;
                 case FieldDescriptorProto.Types.Type.Enum:
-                    ueType += GetMessageName(field.TypeName, "EGrpc"); break;
+                    ueType += GetMessageName(field.TypeName, "E"); break;
                 default:
                     ueType += "ERROR_TYPE"; break;
             }

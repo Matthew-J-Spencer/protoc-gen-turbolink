@@ -150,7 +150,7 @@ namespace protoc_gen_turbolink
 		public int Index { get; set; }
 		public virtual string Name                               //eg. "FGrpcGreeterHelloResponse",  "FGrpcGoogleProtobufValue"
 		{
-			get => "FGrpc" +
+			get => "F" +
 				ServiceFile.CamelPackageName +
 				TurboLinkUtils.JoinCamelString(ParentMessageNameList, string.Empty) +
 				CamelName;
@@ -428,7 +428,7 @@ namespace protoc_gen_turbolink
 		{
 			GrpcEnum newEnum = new GrpcEnum();
 			newEnum.Name = string.Join(string.Empty,
-				"EGrpc", serviceFile.CamelPackageName, TurboLinkUtils.JoinString(parentNameList, string.Empty), enumDesc.Name);
+				"E", serviceFile.CamelPackageName, TurboLinkUtils.JoinString(parentNameList, string.Empty), enumDesc.Name);
 
 			newEnum.DisplayName = serviceFile.CamelPackageName + "." + 
 				TurboLinkUtils.JoinString(parentNameList, ".") + 
@@ -495,7 +495,7 @@ namespace protoc_gen_turbolink
 					serviceFile.MessageArray.Add(oneofMessage);
 
 					//add oneof enum
-					oneofEnum.Name = "EGrpc" + oneofMessage.Name.Substring(5);
+					oneofEnum.Name = "E" + oneofMessage.Name.Substring(5);
 					oneofEnum.DisplayName = oneofMessage.DisplayName;
 					oneofEnum.Fields = new List<GrpcEnumField>();
 					serviceFile.EnumArray.Add(oneofEnum);
