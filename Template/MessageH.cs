@@ -35,8 +35,8 @@ namespace protoc_gen_turbolink.Template
             
             #line 11 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-foreach (string dependency in s.DependencyFiles)
-{
+    foreach (string dependency in s.DependencyFiles)
+    {
 
             
             #line default
@@ -51,324 +51,398 @@ foreach (string dependency in s.DependencyFiles)
             this.Write("Message.h\"\r\n");
             
             #line 16 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+
+    }
+
             
             #line default
             #line hidden
             
-            #line 17 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-if(s.EnumArray.Count>0 || s.MessageArray.Count>0) {
-            
-            #line default
-            #line hidden
-            
-            #line 18 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-if(s.NeedBlueprintFunctionLibrary()) {
-            
-            #line default
-            #line hidden
-            this.Write("#include \"Kismet/BlueprintFunctionLibrary.h\"\r\n");
-            
-            #line 20 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
-            
-            #line default
-            #line hidden
-            this.Write("#include \"");
-            
-            #line 21 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(s.CamelFileName));
-            
-            #line default
-            #line hidden
-            this.Write("Message.generated.h\"\r\n");
-            
-            #line 22 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 19 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    if (s.EnumArray.Count > 0 || s.MessageArray.Count > 0)
+    {
+
             
             #line default
             #line hidden
             
             #line 23 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-foreach (GrpcEnum enumDefine in s.EnumArray)
-{
+        if (s.NeedBlueprintFunctionLibrary())
+        {
+
+            
+            #line default
+            #line hidden
+            this.Write("#include \"Kismet/BlueprintFunctionLibrary.h\"\r\n");
+            
+            #line 28 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
+            
+            #line default
+            #line hidden
+            this.Write("#include \"");
+            
+            #line 31 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(s.CamelFileName));
+            
+            #line default
+            #line hidden
+            this.Write("Message.generated.h\"\r\n");
+            
+            #line 32 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    }
+
+            
+            #line default
+            #line hidden
+            
+            #line 35 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    foreach (GrpcEnum enumDefine in s.EnumArray)
+    {
 
             
             #line default
             #line hidden
             this.Write("\r\nUENUM(BlueprintType, meta = (DisplayName=\"");
             
-            #line 28 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 40 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumDefine.DisplayName));
             
             #line default
             #line hidden
             this.Write("\", ScriptName=\"");
             
-            #line 28 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 40 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumDefine.Name));
             
             #line default
             #line hidden
             this.Write("\"))\r\nenum class ");
             
-            #line 29 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 41 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumDefine.Name));
             
             #line default
             #line hidden
             this.Write(" : uint8\r\n{\r\n");
             
-            #line 31 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-if(enumDefine.MissingZeroField) {
+            #line 43 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        if (enumDefine.MissingZeroField)
+        {
+
             
             #line default
             #line hidden
             this.Write("    _ZERO_RESERVED_FIELD_=0 UMETA(Hidden),\r\n");
             
-            #line 33 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
             
             #line default
             #line hidden
             
-            #line 34 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 51 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-foreach (GrpcEnumField enumField in enumDefine.Fields)
-{
+        foreach (GrpcEnumField enumField in enumDefine.Fields)
+        {
 
             
             #line default
             #line hidden
             this.Write("    ");
             
-            #line 38 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 55 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumField.Name));
             
             #line default
             #line hidden
             this.Write("=");
             
-            #line 38 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 55 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumField.Number));
             
             #line default
             #line hidden
             this.Write(",\r\n");
             
-            #line 39 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 56 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write("};\r\n");
             
-            #line 41 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 60 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    }
+
             
             #line default
             #line hidden
             
-            #line 42 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
- 
-foreach(GrpcMessage message in s.MessageArray)
-{
-if(message.HasNativeMake || message is GrpcMessage_Oneof)
-{
+            #line 63 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    foreach (GrpcMessage message in s.MessageArray)
+    {
+        if (message.HasNativeMake || message is GrpcMessage_Oneof)
+        {
 
             
             #line default
             #line hidden
             this.Write("\r\nUSTRUCT(BlueprintType, meta = (DisplayName=\"");
             
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 70 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.DisplayName));
             
             #line default
             #line hidden
             this.Write("\",\r\n    HasNativeMake = \"TurboLinkGrpc.");
             
-            #line 50 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 71 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name.Substring(1)));
             
             #line default
             #line hidden
             this.Write("HelperLibrary.Make");
             
-            #line 50 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 71 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.CamelName));
             
             #line default
             #line hidden
             this.Write("\",\r\n    HasNativeBreak = \"TurboLinkGrpc.");
             
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 72 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name.Substring(1)));
             
             #line default
             #line hidden
             this.Write("HelperLibrary.Break");
             
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 72 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.CamelName));
             
             #line default
             #line hidden
             this.Write("\"))\r\n");
             
-            #line 52 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-} else {
+            #line 73 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+        else
+        {
+
             
             #line default
             #line hidden
             this.Write("\r\nUSTRUCT(BlueprintType, meta = (DisplayName=\"");
             
-            #line 54 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 79 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.DisplayName));
             
             #line default
             #line hidden
             this.Write("\"))\r\n");
             
-            #line 55 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 80 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
             
             #line default
             #line hidden
             this.Write("struct ");
             
-            #line 56 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 83 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name));
             
             #line default
             #line hidden
             this.Write(" : public FGrpcMessage\r\n{\r\n    GENERATED_BODY()\r\n");
             
-            #line 59 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 86 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-if(g.GenerateJsonCode && !(message is GrpcMessage_Oneof)) {
+        if (g.GenerateJsonCode && !(message is GrpcMessage_Oneof))
+        {
 
             
             #line default
             #line hidden
             this.Write("    DECLARE_JSON_FUNCTIONS()\r\n");
             
-            #line 63 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 91 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
             
             #line default
             #line hidden
             
-            #line 64 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 94 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-if(message is GrpcMessage_Oneof) {
-GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message;
+        if (message is GrpcMessage_Oneof)
+        {
+            GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message;
 
             
             #line default
             #line hidden
             this.Write("\r\n    UPROPERTY(BlueprintReadWrite, Category = TurboLink)\r\n    ");
             
-            #line 70 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 101 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.OneofEnum.Name));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 70 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 101 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.CamelName));
             
             #line default
             #line hidden
             this.Write("Case;\r\n");
             
-            #line 71 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 102 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+
             
             #line default
             #line hidden
             
-            #line 72 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 105 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-foreach(GrpcMessageField field in message.Fields)
-{
-if(field.NeedNativeMake)
-{
+        foreach (GrpcMessageField field in message.Fields)
+        {
+            if (field.NeedNativeMake)
+            {
 
             
             #line default
             #line hidden
             this.Write("\r\n    ");
             
-            #line 79 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.TypeAsNativeField));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 79 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldName));
             
             #line default
             #line hidden
             this.Write(";\r\n");
             
-            #line 80 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else{
+            #line 113 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+            else
+            {
+
             
             #line default
             #line hidden
             this.Write("\r\n    UPROPERTY(BlueprintReadWrite, Category = TurboLink)\r\n    ");
             
-            #line 83 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 83 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldName));
             
             #line default
             #line hidden
             
-            #line 83 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldDefaultValue));
             
             #line default
             #line hidden
             this.Write(";\r\n");
             
-            #line 84 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}}
+            #line 121 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+        }
+
             
             #line default
             #line hidden
-            this.Write("};\r\n");
+            this.Write("\r\n\r\n\r\n\r\n");
             
-            #line 86 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 129 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        foreach (var customUnrealComment in message.UnrealCommentFields)
+        {
+            var trimKeyword = message.CamelName.ToLower();
+            if (customUnrealComment.ToLower().StartsWith(message.CamelName.ToLower()))
+            {
+                // Trim first word:
+                var trimmedComment = customUnrealComment.Replace(trimKeyword, "");
+
+            
+            #line default
+            #line hidden
+            this.Write("         ");
+            
+            #line 137 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            this.Write(this.ToStringHelper.ToStringWithCulture(trimmedComment));
+            
+            #line default
+            #line hidden
+            this.Write("       ");
+            
+            #line 137 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+        }
+
+            
+            #line default
+            #line hidden
+            this.Write("\r\n\r\n\r\n\r\n};\r\n");
+            
+            #line 146 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    }
+
             
             #line default
             #line hidden
             
-            #line 87 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
- 
-foreach(GrpcMessage message in s.MessageArray)
-{
-if(message.HasNativeMake || message is GrpcMessage_Oneof)
-{
+            #line 149 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+    foreach (GrpcMessage message in s.MessageArray)
+    {
+        if (message.HasNativeMake || message is GrpcMessage_Oneof)
+        {
 
             
             #line default
             #line hidden
             this.Write("\r\nUCLASS()\r\nclass U");
             
-            #line 95 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 157 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name.Substring(1)));
             
             #line default
@@ -376,227 +450,278 @@ if(message.HasNativeMake || message is GrpcMessage_Oneof)
             this.Write("HelperLibrary : public UBlueprintFunctionLibrary\r\n{\r\n    GENERATED_BODY()\r\npublic" +
                     ":\r\n    UFUNCTION(BlueprintPure, Category = \"TurboLink|");
             
-            #line 99 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 161 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(s.CamelPackageName));
             
             #line default
             #line hidden
             this.Write("\", meta=(BlueprintThreadSafe))\r\n    static ");
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 162 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name));
             
             #line default
             #line hidden
             this.Write(" Make");
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 162 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.CamelName));
             
             #line default
             #line hidden
             this.Write("(");
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-if(message is GrpcMessage_Oneof){ GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message; 
+            #line 162 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            if (message is GrpcMessage_Oneof)
+            {
+                GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message;
+
             
             #line default
             #line hidden
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 166 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.OneofEnum.Name));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 166 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.CamelName));
             
             #line default
             #line hidden
             this.Write("Case, \r\n");
             
-            #line 101 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else{
+            #line 167 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+            else
+            {
+
             
             #line default
             #line hidden
             this.Write(" \r\n");
             
-            #line 102 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 172 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 102 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 174 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-for(int index=0; index<message.Fields.Count; index++){
-GrpcMessageField field = message.Fields[index];
+            for (int index = 0; index < message.Fields.Count; index++)
+            {
+                GrpcMessageField field = message.Fields[index];
 
             
             #line default
             #line hidden
             
-            #line 105 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 178 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));
             
             #line default
             #line hidden
             this.Write(" ");
             
-            #line 105 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 178 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldName));
             
             #line default
             #line hidden
             
-            #line 105 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 178 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-if(index==(message.Fields.Count-1)){
+                if (index == (message.Fields.Count - 1))
+                {
+
             
             #line default
             #line hidden
             this.Write(" \r\n    ");
             
-            #line 107 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else if((index+1)%3==0){
+            #line 182 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+                else if ((index + 1) % 3 == 0)
+                {
+
             
             #line default
             #line hidden
             this.Write(", \r\n        ");
             
-            #line 108 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else{
+            #line 187 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+                else
+                {
+
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 108 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}}
+            #line 191 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+            }
+
             
             #line default
             #line hidden
             this.Write(");\r\n\r\n    UFUNCTION(BlueprintPure, Category = \"TurboLink|");
             
-            #line 111 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 197 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(s.CamelPackageName));
             
             #line default
             #line hidden
             this.Write("\", meta=(BlueprintThreadSafe))\r\n    static void Break");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 198 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.CamelName));
             
             #line default
             #line hidden
             this.Write("(const ");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 198 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.Name));
             
             #line default
             #line hidden
             this.Write("& ");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 198 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.CamelName));
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-if(message is GrpcMessage_Oneof){ GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message; 
+            #line 198 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            if (message is GrpcMessage_Oneof)
+            {
+                GrpcMessage_Oneof oneofMessage = (GrpcMessage_Oneof)message;
+
             
             #line default
             #line hidden
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 202 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.OneofEnum.Name));
             
             #line default
             #line hidden
             this.Write("& ");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 202 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.CamelName));
             
             #line default
             #line hidden
             this.Write("Case, \r\n");
             
-            #line 113 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else{
+            #line 203 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+            else
+            {
+
             
             #line default
             #line hidden
             this.Write(" \r\n");
             
-            #line 114 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}
+            #line 208 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+            }
+
             
             #line default
             #line hidden
             this.Write("        ");
             
-            #line 114 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 210 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-for(int index=0; index<message.Fields.Count; index++){
-GrpcMessageField field = message.Fields[index];
+            for (int index = 0; index < message.Fields.Count; index++)
+            {
+                GrpcMessageField field = message.Fields[index];
 
             
             #line default
             #line hidden
             
-            #line 117 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 214 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));
             
             #line default
             #line hidden
             this.Write("& ");
             
-            #line 117 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 214 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldName));
             
             #line default
             #line hidden
             
-            #line 117 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+            #line 214 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
 
-if(index==(message.Fields.Count-1)){
+                if (index == (message.Fields.Count - 1))
+                {
+
             
             #line default
             #line hidden
             this.Write(" \r\n    ");
             
-            #line 119 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else if((index+1)%3==0){
+            #line 218 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+                else if ((index + 1) % 3 == 0)
+                {
+
             
             #line default
             #line hidden
             this.Write(", \r\n        ");
             
-            #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}else{
+            #line 223 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+                else
+                {
+
             
             #line default
             #line hidden
             this.Write(", ");
             
-            #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}}
+            #line 227 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+                }
+            }
+
             
             #line default
             #line hidden
             this.Write(");\r\n};\r\n");
             
-            #line 123 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
-}}
+            #line 233 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
+
+        }
+    }
+
             
             #line default
             #line hidden

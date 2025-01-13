@@ -46,10 +46,10 @@ namespace protoc_gen_turbolink
         }
         public static string GetMessageName(string grpcName, string prefix="F")
         {
-            //eg.  ".Time.NowResponse"  -> "FGrpcTimeNowResponse"
-            //eg.  "authzed.api.v1.CheckRequest" => "FGrpcAuthzedApiV1CheckRequest"
-            string[] words = grpcName.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries).ToArray();
-            return prefix + JoinCamelString(words, string.Empty);
+            // Split the grpcName by '.' and take the last part to exclude the namespace
+            string[] words = grpcName.Split(new char[] { '.' }, StringSplitOptions.RemoveEmptyEntries);
+            string className = words.Last(); // Get the last element which is the actual message name
+            return prefix + MakeCamelString(className);
         }
         public static string GetFieldType(FieldDescriptorProto field)
         {
