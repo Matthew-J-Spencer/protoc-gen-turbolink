@@ -122,10 +122,6 @@ struct <#= message.Name #> : public FGrpcMessage
             }
         }
 #>
-
-
-
-
 <#
         foreach (var customUnrealComment in message.UnrealCommentFields)
         {
@@ -134,13 +130,11 @@ struct <#= message.Name #> : public FGrpcMessage
             {
                 // Trim first word:
                 var trimmedComment = customUnrealComment.Replace(trimKeyword, "");
-#>         <#= trimmedComment #>       <#
+#>         <#= trimmedComment #>       
+<#
             }
         }
 #>
-
-
-
 
 };
 <#

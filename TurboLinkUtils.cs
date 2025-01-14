@@ -66,7 +66,8 @@ namespace protoc_gen_turbolink
                     ueType += "int64"; break;
                 case FieldDescriptorProto.Types.Type.Uint64:
                 case FieldDescriptorProto.Types.Type.Fixed64:
-                    ueType += "FUInt64"; break;
+                   // ueType += "FUInt64"; break;
+                    ueType += "uint64"; break;
                 case FieldDescriptorProto.Types.Type.Int32:
                 case FieldDescriptorProto.Types.Type.Sfixed32:
                 case FieldDescriptorProto.Types.Type.Sint32:
