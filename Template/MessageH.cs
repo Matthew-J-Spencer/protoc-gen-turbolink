@@ -109,7 +109,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\nUENUM(BlueprintType, meta = (DisplayName=\"");
+            this.Write("\r\nUENUM(meta = (DisplayName=\"");
             
             #line 40 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(enumDefine.DisplayName));
@@ -201,7 +201,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\nUSTRUCT(BlueprintType, meta = (DisplayName=\"");
+            this.Write("\r\nUSTRUCT(meta = (DisplayName=\"");
             
             #line 70 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.DisplayName));
@@ -247,7 +247,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\nUSTRUCT(BlueprintType, meta = (DisplayName=\"");
+            this.Write("\r\nUSTRUCT(meta = (DisplayName=\"");
             
             #line 79 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(message.DisplayName));
@@ -299,7 +299,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\n    UPROPERTY(BlueprintReadWrite, Category = TurboLink)\r\n    ");
+            this.Write("\r\n    UPROPERTY()\r\n    ");
             
             #line 101 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(oneofMessage.OneofEnum.Name));
@@ -358,7 +358,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\n    UPROPERTY(BlueprintReadWrite, Category = TurboLink)\r\n    ");
+            this.Write("\r\n    UPROPERTY()\r\n    ");
             
             #line 120 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));
