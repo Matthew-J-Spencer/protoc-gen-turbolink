@@ -70,10 +70,11 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("& Response)\r\n{\r\n\tif (_Handle != this->Handle) return;\r\n\r\n\tResponseLambda(GrpcResu" +
-                    "lt, Response);\r\n");
+            this.Write("& Response)\r\n{\r\n\tif (_Handle != this->Handle) {\r\n\t\tUE_LOG(LogTemp, Warning, TEXT(" +
+                    "\"This would have invalidated, but I prevented it. Has anything done wrong?\"));\r\n" +
+                    "\t\t// return;\r\n\t}\r\n\r\n\tResponseLambda(GrpcResult, Response);\r\n");
             
-            #line 22 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 25 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
 			if(!method.ServerStreaming) 
 			{
@@ -83,27 +84,27 @@ foreach(GrpcService service in s.ServiceArray)
             #line hidden
             this.Write("\tInnerClient->On");
             
-            #line 26 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 29 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response.RemoveDynamic(this, &U");
             
-            #line 26 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 29 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 26 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 29 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("LambdaWrapper::OnResponse);\r\n");
             
-            #line 27 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 30 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
 			}
 
@@ -112,7 +113,7 @@ foreach(GrpcService service in s.ServiceArray)
             #line hidden
             this.Write("}\r\n\r\n");
             
-            #line 32 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 35 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
 			if(method.ServerStreaming) 
 			{
@@ -122,13 +123,13 @@ foreach(GrpcService service in s.ServiceArray)
             #line hidden
             this.Write("void U");
             
-            #line 36 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 39 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 36 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 39 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
@@ -137,34 +138,34 @@ foreach(GrpcService service in s.ServiceArray)
                     "e NewState)\r\n{\r\n\tif (_Handle != this->Handle) return;\r\n\tif (NewState == EGrpcCon" +
                     "textState::Done)\r\n\t{\r\n");
             
-            #line 41 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 44 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
  if(method.ServerStreaming) { 
             
             #line default
             #line hidden
             this.Write("\t\tFinishLambda();\r\n\r\n");
             
-            #line 44 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 47 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 }
             
             #line default
             #line hidden
             this.Write("\t\tInnerClient->On");
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response.RemoveDynamic(this, &U");
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
@@ -172,20 +173,20 @@ foreach(GrpcService service in s.ServiceArray)
             this.Write("LambdaWrapper::OnResponse);\r\n\t\tInnerClient->OnContextStateChange.RemoveDynamic(th" +
                     "is, &U");
             
-            #line 46 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 49 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 46 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 49 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("LambdaWrapper::OnContextStateChanged);\r\n\t}\r\n}\r\n\r\n");
             
-            #line 50 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
+            #line 53 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
 			}
 		}
