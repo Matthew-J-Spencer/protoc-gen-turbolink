@@ -26,7 +26,7 @@ void U<#=service.Name#><#=method.Name#>LambdaWrapper::OnResponse(FGrpcContextHan
 			if(!method.ServerStreaming) 
 			{
 #>
-	InnerClient->On<#=method.Name#>Response.RemoveDynamic(this, &U<#=service.Name#><#=method.Name#>LambdaWrapper::OnResponse);
+	InnerClient->On<#=method.Name#>Response.RemoveAll(this);
 <#
 			}
 #>
@@ -45,8 +45,8 @@ void U<#=service.Name#><#=method.Name#>LambdaWrapper::OnContextStateChanged(FGrp
 		FinishLambda();
 
 <#}#>
-		InnerClient->On<#=method.Name#>Response.RemoveDynamic(this, &U<#=service.Name#><#=method.Name#>LambdaWrapper::OnResponse);
-		InnerClient->OnContextStateChange.RemoveDynamic(this, &U<#=service.Name#><#=method.Name#>LambdaWrapper::OnContextStateChanged);
+		InnerClient->On<#=method.Name#>Response.RemoveAll(this);
+		InnerClient->OnContextStateChange.RemoveAll(this);
 	}
 }
 

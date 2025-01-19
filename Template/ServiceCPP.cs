@@ -366,7 +366,7 @@ EGrpcServiceState U");
             
             #line default
             #line hidden
-            this.Write("Response.AddUniqueDynamic(lambdaWrapper, &U");
+            this.Write("Response.AddUObject(lambdaWrapper, &U");
             
             #line 102 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));

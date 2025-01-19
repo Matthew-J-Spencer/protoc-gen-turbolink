@@ -116,8 +116,8 @@ foreach (GrpcServiceMethod method in service.MethodArray)
             
             #line default
             #line hidden
-            this.Write(" : public UBlueprintAsyncActionBase\r\n{\r\n\tGENERATED_BODY()\r\n\r\npublic:\r\n\tDECLARE_DY" +
-                    "NAMIC_MULTICAST_DELEGATE_TwoParams(F");
+            this.Write(" : public UBlueprintAsyncActionBase\r\n{\r\n\tGENERATED_BODY()\r\n\r\npublic:\r\n\tDECLARE_MU" +
+                    "LTICAST_DELEGATE_TwoParams(F");
             
             #line 44 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
@@ -130,119 +130,97 @@ foreach (GrpcServiceMethod method in service.MethodArray)
             
             #line default
             #line hidden
-            this.Write("Delegate, const FGrpcResult&, GrpcResult, const ");
+            this.Write("Delegate, const FGrpcResult&, const ");
             
             #line 44 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.OutputType));
             
             #line default
             #line hidden
-            this.Write("&, Response);\r\n\r\n\tUFUNCTION(BlueprintCallable, Category = \"TurboLink|");
+            this.Write("&);\r\n\r\n\tstatic UCall");
             
             #line 46 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
-            this.Write("\", meta = (\r\n\t\tBlueprintInternalUseOnly = \"true\",\r\n\t\tWorldContext = \"WorldContext" +
-                    "Object\",\r\n\t\tDisplayName = \"Call ");
             
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
-            
-            #line default
-            #line hidden
-            this.Write(" ");
-            
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
-            
-            #line default
-            #line hidden
-            this.Write("\",\r\n\t\tAdvancedDisplay = 2))\r\n\tstatic UCall");
-            
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
-            
-            #line default
-            #line hidden
-            
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 46 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("* ");
             
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 46 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("(UObject* WorldContextObject, const ");
             
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 46 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.InputType));
             
             #line default
             #line hidden
             this.Write("& request, FGrpcMetaData metaData = FGrpcMetaData(), float deadLineSeconds = 0.f)" +
-                    ";\r\n\r\n\tUPROPERTY(BlueprintAssignable)\r\n\tF");
+                    ";\r\n\r\n\tF");
             
-            #line 54 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 54 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Delegate On");
             
-            #line 54 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 48 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response;\r\n\r\n");
             
-            #line 56 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 50 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
 if(method.ServerStreaming) {
             
             #line default
             #line hidden
-            this.Write("\tUPROPERTY(BlueprintAssignable)\r\n\tF");
+            this.Write("\r\n\tF");
             
-            #line 58 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 52 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 58 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 52 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Delegate OnFinished;\r\n\r\n");
             
-            #line 60 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 54 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
 }
             
             #line default
             #line hidden
-            this.Write("\tUPROPERTY(BlueprintAssignable)\r\n\tF");
+            this.Write("\r\n\tF");
             
-            #line 62 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 56 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 62 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 56 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
@@ -250,35 +228,35 @@ if(method.ServerStreaming) {
             this.Write("Delegate OnFail;\r\n\r\nprivate:\r\n\tvirtual void Activate() override;\r\n\r\n\tUPROPERTY()\r" +
                     "\n\tU");
             
-            #line 68 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 62 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             this.Write("* ");
             
-            #line 68 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 62 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             this.Write(";\r\n\t\r\n\tUPROPERTY()\r\n\tU");
             
-            #line 71 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 65 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             this.Write("Client* ");
             
-            #line 71 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 65 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             this.Write("Client;\r\n\t\r\n\tFGrpcContextHandle Context;\r\n\t");
             
-            #line 74 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 68 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.InputType));
             
             #line default
@@ -294,17 +272,16 @@ if(method.ServerStreaming) {
 	UFUNCTION()
 	void OnContextStateChange(FGrpcContextHandle Handle, EGrpcContextState State);
 
-	UFUNCTION()
 	void OnResponse(FGrpcContextHandle Handle, const FGrpcResult& GrpcResult, const ");
             
-            #line 86 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 79 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.OutputType));
             
             #line default
             #line hidden
             this.Write("& Response);\r\n\r\n\tvoid Shutdown();\r\n};\r\n");
             
-            #line 90 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
+            #line 83 "F:\Git\protoc-gen-turbolink\Template\NodeH.tt"
 
 	}
 }

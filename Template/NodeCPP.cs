@@ -274,7 +274,7 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("Response.AddUniqueDynamic(this, &UCall");
+            this.Write("Response.AddUObject(this, &UCall");
             
             #line 68 "F:\Git\protoc-gen-turbolink\Template\NodeCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));

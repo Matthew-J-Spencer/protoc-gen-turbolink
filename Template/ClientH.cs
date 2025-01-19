@@ -80,7 +80,7 @@ if(method.ClientStreaming) {
             
             #line default
             #line hidden
-            this.Write("DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FOn");
+            this.Write("DECLARE_MULTICAST_DELEGATE_OneParam(FOn");
             
             #line 26 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
@@ -93,14 +93,14 @@ if(method.ClientStreaming) {
             
             #line default
             #line hidden
-            this.Write("WriteComplete, FGrpcContextHandle, Handle);\r\n");
+            this.Write("WriteComplete, FGrpcContextHandle);\r\n");
             
             #line 27 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 }
             
             #line default
             #line hidden
-            this.Write("DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FOn");
+            this.Write("DECLARE_MULTICAST_DELEGATE_ThreeParams(FOn");
             
             #line 28 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
@@ -113,14 +113,14 @@ if(method.ClientStreaming) {
             
             #line default
             #line hidden
-            this.Write("Response, FGrpcContextHandle, Handle, const FGrpcResult&, GrpcResult, const ");
+            this.Write("Response, FGrpcContextHandle, const FGrpcResult&, const ");
             
             #line 28 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.OutputType));
             
             #line default
             #line hidden
-            this.Write("&, Response);\r\n");
+            this.Write("&);\r\n");
             
             #line 29 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
@@ -152,56 +152,56 @@ if(method.ClientStreaming) {
             
             #line default
             #line hidden
-            this.Write("\tUPROPERTY(BlueprintAssignable)\r\n\tFOn");
+            this.Write("\tFOn");
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 44 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 44 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("WriteComplete On");
             
-            #line 45 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 44 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("WriteComplete;\r\n\r\n");
             
-            #line 47 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 46 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 }
             
             #line default
             #line hidden
-            this.Write("\tUPROPERTY(BlueprintAssignable)\r\n\tFOn");
+            this.Write("\tFOn");
             
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 47 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 47 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response On");
             
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 47 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response;\r\n\r\n");
             
-            #line 51 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 49 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 }
 
@@ -210,7 +210,7 @@ if(method.ClientStreaming) {
             #line hidden
             this.Write("public:\r\n");
             
-            #line 55 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 53 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 foreach (GrpcServiceMethod method in service.MethodArray)
 {
@@ -218,24 +218,23 @@ foreach (GrpcServiceMethod method in service.MethodArray)
             
             #line default
             #line hidden
-            this.Write("\tUFUNCTION(BlueprintCallable, Category = TurboLink)\r\n\tFGrpcContextHandle Init");
+            this.Write("\tFGrpcContextHandle Init");
             
-            #line 60 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 57 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
-            this.Write("();\r\n\r\n\tUFUNCTION(BlueprintCallable, Category = TurboLink, meta = (AdvancedDispla" +
-                    "y = 2))\r\n\tvoid ");
+            this.Write("();\r\n\r\n\tvoid ");
             
-            #line 63 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 59 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("(FGrpcContextHandle Handle, const ");
             
-            #line 63 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 59 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.InputType));
             
             #line default
@@ -243,23 +242,23 @@ foreach (GrpcServiceMethod method in service.MethodArray)
             this.Write("& Request, FGrpcMetaData MetaData = FGrpcMetaData(), float DeadLineSeconds = 0.f)" +
                     ";\r\n\r\n");
             
-            #line 65 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 61 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 if(method.ClientStreaming && !method.ServerStreaming) {
 
             
             #line default
             #line hidden
-            this.Write("\tUFUNCTION(BlueprintCallable, Category = TurboLink)\r\n\tvoid Stop");
+            this.Write("\tvoid Stop");
             
-            #line 69 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 64 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("(FGrpcContextHandle Handle);\r\n");
             
-            #line 70 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 65 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 }
 
@@ -267,17 +266,17 @@ if(method.ClientStreaming && !method.ServerStreaming) {
             #line default
             #line hidden
             
-            #line 73 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 68 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 }
 
             
             #line default
             #line hidden
-            this.Write("public:\r\n\tvirtual void Shutdown() override;\r\n\r\n\tUFUNCTION(BlueprintCallable, Cate" +
-                    "gory = TurboLink)\r\n\tvoid TryCancel(FGrpcContextHandle Handle);\r\n};\r\n\r\n");
+            this.Write("public:\r\n\tvirtual void Shutdown() override;\r\n\r\n\tvoid TryCancel(FGrpcContextHandle" +
+                    " Handle);\r\n};\r\n\r\n");
             
-            #line 83 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
+            #line 77 "F:\Git\protoc-gen-turbolink\Template\ClientH.tt"
 
 }
 

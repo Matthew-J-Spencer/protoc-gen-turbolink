@@ -8,9 +8,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a69308d3-2b5b-4eb2-b493-7c1023ab51f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/FileContentIndex/1f524906-1806-4da9-8ba0-0569e22f466d.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/FileContentIndex/fdacae51-4a18-44aa-8b1d-4bc3e14ba695.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/ServicePrivateCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceCPP.tt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/ServicePrivateCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateCPP.tt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -26,6 +36,7 @@
     <setting file="file://$PROJECT_DIR$/Template/MarshalingCPP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/MessageCPP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/MessageH.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Template/NodeCPP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/NodeH.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/ServiceH.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/ServicePrivateCPP.cs" root0="SKIP_HIGHLIGHTING" />
@@ -68,6 +79,7 @@
       <workItem from="1736768005887" duration="9054000" />
       <workItem from="1736816812373" duration="1440000" />
       <workItem from="1737202576285" duration="313000" />
+      <workItem from="1737286568605" duration="1992000" />
     </task>
     <servers />
   </component>

@@ -65,7 +65,7 @@ void UCall<#=service.Name#><#=method.Name#>::OnServiceStateChanged(EGrpcServiceS
 	{
 		<#=service.Name#>Client = <#=service.Name#>->MakeClient();
 		<#=service.Name#>Client->OnContextStateChange.AddUniqueDynamic(this, &UCall<#=service.Name#><#=method.Name#>::OnContextStateChange);
-		<#=service.Name#>Client->On<#=method.Name#>Response.AddUniqueDynamic(this, &UCall<#=service.Name#><#=method.Name#>::OnResponse);
+		<#=service.Name#>Client->On<#=method.Name#>Response.AddUObject(this, &UCall<#=service.Name#><#=method.Name#>::OnResponse);
 
 		Context = <#=service.Name#>Client->Init<#=method.Name#>();
 		<#=service.Name#>Client-><#=method.Name#>(Context, Request, MetaData, DeadLineSeconds);

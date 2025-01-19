@@ -89,20 +89,7 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("Response.RemoveDynamic(this, &U");
-            
-            #line 29 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
-            
-            #line default
-            #line hidden
-            
-            #line 29 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
-            
-            #line default
-            #line hidden
-            this.Write("LambdaWrapper::OnResponse);\r\n");
+            this.Write("Response.RemoveAll(this);\r\n");
             
             #line 30 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
@@ -157,34 +144,8 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("Response.RemoveDynamic(this, &U");
-            
-            #line 48 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
-            
-            #line default
-            #line hidden
-            
-            #line 48 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
-            
-            #line default
-            #line hidden
-            this.Write("LambdaWrapper::OnResponse);\r\n\t\tInnerClient->OnContextStateChange.RemoveDynamic(th" +
-                    "is, &U");
-            
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
-            
-            #line default
-            #line hidden
-            
-            #line 49 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
-            this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
-            
-            #line default
-            #line hidden
-            this.Write("LambdaWrapper::OnContextStateChanged);\r\n\t}\r\n}\r\n\r\n");
+            this.Write("Response.RemoveAll(this);\r\n\t\tInnerClient->OnContextStateChange.RemoveAll(this);\r\n" +
+                    "\t}\r\n}\r\n\r\n");
             
             #line 53 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 
