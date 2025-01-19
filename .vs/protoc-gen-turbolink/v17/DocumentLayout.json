@@ -7,11 +7,11 @@
       "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\nodeh.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\nodecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\nodecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\nodecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
@@ -75,8 +75,7 @@
               "RelativeToolTip": "Template\\NodeCPP.tt",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-19T11:57:01.751Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-19T11:57:01.751Z"
             },
             {
               "$type": "Document",
@@ -148,8 +147,7 @@
               "RelativeToolTip": "Template\\MessageH.tt",
               "ViewState": "AgIAAGMAAAAAAAAAAAAwwIcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-13T11:28:04.087Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-13T11:28:04.087Z"
             },
             {
               "$type": "Document",

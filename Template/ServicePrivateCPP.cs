@@ -70,9 +70,9 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("& Response)\r\n{\r\n\tif (_Handle != this->Handle) {\r\n\t\tUE_LOG(LogTemp, Warning, TEXT(" +
-                    "\"This would have invalidated, but I prevented it. Has anything done wrong?\"));\r\n" +
-                    "\t\t// return;\r\n\t}\r\n\r\n\tResponseLambda(GrpcResult, Response);\r\n");
+            this.Write("& Response) const\r\n{\r\n\tif (_Handle != this->Handle) {\r\n\t\tUE_LOG(LogTemp, Warning," +
+                    " TEXT(\"This would have invalidated, but I prevented it. Has anything done wrong?" +
+                    "\"));\r\n\t\t// return;\r\n\t}\r\n\r\n\tResponseLambda(GrpcResult, Response);\r\n");
             
             #line 25 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateCPP.tt"
 

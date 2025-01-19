@@ -48,8 +48,8 @@ public:
 	UPROPERTY()
 	U<#=service.Name#>Client* InnerClient;
 
-	UFUNCTION()
-	void OnResponse(FGrpcContextHandle Handle, const FGrpcResult& GrpcResult, const <#=method.OutputType#>& Response);
+	
+	void OnResponse(FGrpcContextHandle Handle, const FGrpcResult& GrpcResult, const <#=method.OutputType#>& Response) const;
 <#
 if(method.ServerStreaming) 
 {

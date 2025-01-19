@@ -142,15 +142,15 @@ foreach(GrpcService service in s.ServiceArray)
             
             #line default
             #line hidden
-            this.Write("Client* InnerClient;\r\n\r\n\tUFUNCTION()\r\n\tvoid OnResponse(FGrpcContextHandle Handle," +
-                    " const FGrpcResult& GrpcResult, const ");
+            this.Write("Client* InnerClient;\r\n\r\n\t\r\n\tvoid OnResponse(FGrpcContextHandle Handle, const FGrp" +
+                    "cResult& GrpcResult, const ");
             
             #line 52 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.OutputType));
             
             #line default
             #line hidden
-            this.Write("& Response);\r\n");
+            this.Write("& Response) const;\r\n");
             
             #line 53 "F:\Git\protoc-gen-turbolink\Template\ServicePrivateH.tt"
 
