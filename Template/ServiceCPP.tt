@@ -93,6 +93,16 @@ void U<#=service.Name#>::Call<#=method.Name#>(const <#=method.InputType#>& Reque
 		InnerClient = MakeClient();
 	}
 	U<#=service.Name#><#=method.Name#>LambdaWrapper* lambdaWrapper = NewObject<U<#=service.Name#><#=method.Name#>LambdaWrapper>();
+
+
+	lambdaWrapper->AddToRoot();
+	
+	FTimerHandle timerHandle;
+	GetWorld()->GetTimerManager().SetTimer(timerHandle, [lambdaWrapper]()
+	{
+		lambdaWrapper->RemoveFromRoot();
+	}, 60.0f, false);
+
 	lambdaWrapper->InnerClient = InnerClient;
 	lambdaWrapper->ResponseLambda = ResponseLambda;
 <# if(method.ServerStreaming) { #>

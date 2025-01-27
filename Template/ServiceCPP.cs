@@ -337,51 +337,63 @@ EGrpcServiceState U");
             
             #line default
             #line hidden
-            this.Write("LambdaWrapper>();\r\n\tlambdaWrapper->InnerClient = InnerClient;\r\n\tlambdaWrapper->Re" +
-                    "sponseLambda = ResponseLambda;\r\n");
+            this.Write(@"LambdaWrapper>();
+
+
+	lambdaWrapper->AddToRoot();
+	
+	FTimerHandle timerHandle;
+	GetWorld()->GetTimerManager().SetTimer(timerHandle, [lambdaWrapper]()
+	{
+		lambdaWrapper->RemoveFromRoot();
+	}, 60.0f, false);
+
+	lambdaWrapper->InnerClient = InnerClient;
+	lambdaWrapper->ResponseLambda = ResponseLambda;
+");
             
-            #line 98 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 108 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
  if(method.ServerStreaming) { 
             
             #line default
             #line hidden
             this.Write("\tlambdaWrapper->FinishLambda = FinishLambda;\r\n");
             
-            #line 100 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 110 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
 }
             
             #line default
             #line hidden
             this.Write("\tlambdaWrapper->Handle = InnerClient->Init");
             
-            #line 101 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 111 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("();\r\n\tInnerClient->On");
             
-            #line 102 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 112 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("Response.AddUObject(lambdaWrapper, &U");
             
-            #line 102 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 112 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 102 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 112 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("LambdaWrapper::OnResponse);\r\n");
             
-            #line 103 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 113 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
 
 			if(method.ServerStreaming) {
 
@@ -390,20 +402,20 @@ EGrpcServiceState U");
             #line hidden
             this.Write("\tInnerClient->OnContextStateChange.AddUniqueDynamic(lambdaWrapper, &U");
             
-            #line 106 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 116 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(service.Name));
             
             #line default
             #line hidden
             
-            #line 106 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 116 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("LambdaWrapper::OnContextStateChanged);\r\n");
             
-            #line 107 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 117 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
 
 			}
 
@@ -412,14 +424,14 @@ EGrpcServiceState U");
             #line hidden
             this.Write("\tInnerClient->");
             
-            #line 110 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 120 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(method.Name));
             
             #line default
             #line hidden
             this.Write("(lambdaWrapper->Handle, Request, MetaData, DeadLineSeconds);\r\n}\r\n");
             
-            #line 112 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 122 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
 
 		}
 	}
@@ -428,7 +440,7 @@ EGrpcServiceState U");
             #line default
             #line hidden
             
-            #line 116 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
+            #line 126 "F:\Git\protoc-gen-turbolink\Template\ServiceCPP.tt"
 
 }
 
