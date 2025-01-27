@@ -95,8 +95,8 @@ void U<#=service.Name#>::Call<#=method.Name#>(const <#=method.InputType#>& Reque
 	U<#=service.Name#><#=method.Name#>LambdaWrapper* lambdaWrapper = NewObject<U<#=service.Name#><#=method.Name#>LambdaWrapper>();
 
 
+	// I (taro) added these temporarily to fix the lambdaWrapper being garbage collected. I really hate it though
 	lambdaWrapper->AddToRoot();
-	
 	FTimerHandle timerHandle;
 	GetWorld()->GetTimerManager().SetTimer(timerHandle, [lambdaWrapper]()
 	{
