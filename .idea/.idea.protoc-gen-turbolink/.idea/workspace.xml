@@ -9,7 +9,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a69308d3-2b5b-4eb2-b493-7c1023ab51f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Template/ServiceCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/FileContentIndex/90e861ba-edb6-4d2b-b4a0-55fcb200b420.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MessageCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MessageCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MessageH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MessageH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageH.tt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,8 @@
       <workItem from="1736816812373" duration="1440000" />
       <workItem from="1737202576285" duration="313000" />
       <workItem from="1737286568605" duration="3341000" />
-      <workItem from="1737952010616" duration="814000" />
+      <workItem from="1737952010616" duration="2027000" />
+      <workItem from="1738244287685" duration="803000" />
     </task>
     <servers />
   </component>
