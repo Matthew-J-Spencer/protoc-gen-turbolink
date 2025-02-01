@@ -319,8 +319,11 @@ namespace protoc_gen_turbolink
 
             serviceFile.DependencyFiles = new List<string>();
             foreach (var dependency in serviceFile.ProtoFileDesc.Dependency)
+            {
                 //set dependency file as turbolink base name, eg. "SGoogleProtobuf/Struct"
                 serviceFile.DependencyFiles.Add(GrpcServiceFiles[dependency].TurboLinkBasicFileName);
+            }
+                
             GrpcServiceFiles[protoFileName] = serviceFile;
         }
 

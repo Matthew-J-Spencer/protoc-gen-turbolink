@@ -9,12 +9,40 @@
   <component name="ChangeListManager">
     <list default="true" id="a69308d3-2b5b-4eb2-b493-7c1023ab51f9" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.protoc-gen-turbolink/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/FileContentIndex/90e861ba-edb6-4d2b-b4a0-55fcb200b420.vsidx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/FileContentIndex/29e0181a-9245-4e70-bd73-1cc358300024.vsidx" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/.suo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.backup.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.backup.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vs/protoc-gen-turbolink/v17/DocumentLayout.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ClientH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ClientH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ContextCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ContextCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ContextCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ContextCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ContextH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ContextH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ContextH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ContextH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MarshalingCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MarshalingCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MarshalingCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MarshalingCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MarshalingH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MarshalingH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/MarshalingH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MarshalingH.tt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/MessageCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageCPP.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/MessageCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageCPP.tt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/MessageH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageH.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Template/MessageH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/MessageH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/NodeH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/NodeH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServiceH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServiceH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServicePrivateCPP.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateCPP.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServicePrivateCPP.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateCPP.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServicePrivateH.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateH.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Template/ServicePrivateH.tt" beforeDir="false" afterPath="$PROJECT_DIR$/Template/ServicePrivateH.tt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboLinkCollection.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboLinkCollection.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TurboLinkGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TurboLinkGenerator.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +54,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d3ae46b61a8a45a36daf9ec0fdf08c992da782f18e5c52fb6a5c77c8f57554e9/Descriptor.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Template/ClientCPP.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Template/ClientH.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Template/ContextCPP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/MarshalingCPP.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Template/MarshalingH.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/MessageCPP.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/MessageH.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Template/NodeCPP.cs" root0="SKIP_HIGHLIGHTING" />
@@ -50,7 +82,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;T4 Template Run Configuration.MessageH.tt.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;JustModelsAndMarshelling&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -75,6 +107,8 @@
       <workItem from="1737286568605" duration="3341000" />
       <workItem from="1737952010616" duration="2027000" />
       <workItem from="1738244287685" duration="803000" />
+      <workItem from="1738396589059" duration="445000" />
+      <workItem from="1738398496292" duration="2622000" />
     </task>
     <servers />
   </component>
