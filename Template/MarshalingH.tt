@@ -20,8 +20,8 @@
 foreach(GrpcMessage message in s.MessageArray) {
 	if(message is GrpcMessage_Oneof) continue;
 #>
-void GRPC_TO_SLAPS(const ::<#=message.GrpcName#>* in, <#=message.Name#>* out);
-void SLAPS_TO_GRPC(const <#=message.Name#>* in, ::<#=message.GrpcName#>* out);
+void GrpcToSlaps(const ::<#=message.GrpcName#>* in, <#=message.Name#>* out);
+void SlapsToGrpc(const <#=message.Name#>* in, ::<#=message.GrpcName#>* out);
 
 <#}#>
 <#

@@ -375,7 +375,7 @@ private void GenerateMessageMarshalingDefine(GrpcMessage message)
         #line hidden
         
         #line 49 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("void GRPC_TO_SLAPS(const ::");
+this.Write("void GrpcToSlaps(const ::");
 
         
         #line default
@@ -483,7 +483,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(mapField.ValueField.FieldType
         #line hidden
         
         #line 62 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" field;\r\n        GRPC_TO_SLAPS(&item.second, &field);\r\n        out->");
+this.Write(" field;\r\n        GrpcToSlaps(&item.second, &field);\r\n        out->");
 
         
         #line default
@@ -564,7 +564,7 @@ if(mapField.ValueField.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) 
         #line hidden
         
         #line 68 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        GRPC_TO_SLAPS(&item.second, &value);\r\n");
+this.Write("        GrpcToSlaps(&item.second, &value);\r\n");
 
         
         #line default
@@ -674,7 +674,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(repeatedField.ItemField.Field
         #line hidden
         
         #line 80 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" field;\r\n        GRPC_TO_SLAPS(&(in->");
+this.Write(" field;\r\n        GrpcToSlaps(&(in->");
 
         
         #line default
@@ -729,7 +729,7 @@ this.Write("(field)));\r\n");
         #line hidden
         
         #line 84 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        GRPC_TO_SLAPS(&(in->");
+this.Write("        GrpcToSlaps(&(in->");
 
         
         #line default
@@ -912,7 +912,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(fieldOfOneofMessage.FieldType
         #line hidden
         
         #line 103 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" field;\r\n        GRPC_TO_SLAPS(&(in->");
+this.Write(" field;\r\n        GrpcToSlaps(&(in->");
 
         
         #line default
@@ -1037,7 +1037,7 @@ this.Write(";\r\n    }\r\n");
         #line hidden
         
         #line 109 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        GRPC_TO_SLAPS(&(in->");
+this.Write("        GrpcToSlaps(&(in->");
 
         
         #line default
@@ -1306,7 +1306,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));
         #line hidden
         
         #line 123 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" field;\r\n        GRPC_TO_SLAPS(&(in->");
+this.Write(" field;\r\n        GrpcToSlaps(&(in->");
 
         
         #line default
@@ -1361,7 +1361,7 @@ this.Write("(field));\r\n    }\r\n");
         #line hidden
         
         #line 128 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("    GRPC_TO_SLAPS(&(in->");
+this.Write("    GrpcToSlaps(&(in->");
 
         
         #line default
@@ -1451,7 +1451,7 @@ this.Write(";\r\n");
         #line hidden
         
         #line 136 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("}\r\n\r\nvoid SLAPS_TO_GRPC(const ");
+this.Write("}\r\n\r\nvoid SlapsToGrpc(const ");
 
         
         #line default
@@ -1546,7 +1546,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(mapField.ValueField.FieldGrpc
         #line hidden
         
         #line 151 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" value;\r\n        SLAPS_TO_GRPC(item.Value.Get(), &value);\r\n        (*(out->mutable_");
+this.Write(" value;\r\n        SlapsToGrpc(item.Value.Get(), &value);\r\n        (*(out->mutable_");
 
         
         #line default
@@ -1600,7 +1600,7 @@ this.Write(this.ToStringHelper.ToStringWithCulture(mapField.ValueField.FieldGrpc
         #line hidden
         
         #line 155 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write(" value;\r\n        SLAPS_TO_GRPC(&item.Value, &value);\r\n        (*(out->mutable_");
+this.Write(" value;\r\n        SlapsToGrpc(&item.Value, &value);\r\n        (*(out->mutable_");
 
         
         #line default
@@ -1733,7 +1733,7 @@ if(field.NeedNativeMake) {
         #line hidden
         
         #line 165 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        SLAPS_TO_GRPC(value.Get(), out->add_");
+this.Write("        SlapsToGrpc(value.Get(), out->add_");
 
         
         #line default
@@ -1760,7 +1760,7 @@ this.Write("());\r\n");
         #line hidden
         
         #line 167 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        SLAPS_TO_GRPC(&value, out->add_");
+this.Write("        SlapsToGrpc(&value, out->add_");
 
         
         #line default
@@ -1930,7 +1930,7 @@ if(fieldOfOneofMessage.NeedNativeMake) {
         #line hidden
         
         #line 186 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        SLAPS_TO_GRPC(");
+this.Write("        SlapsToGrpc(");
 
         
         #line default
@@ -1971,7 +1971,7 @@ this.Write("());\r\n");
         #line hidden
         
         #line 188 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("        SLAPS_TO_GRPC(&(");
+this.Write("        SlapsToGrpc(&(");
 
         
         #line default
@@ -2086,7 +2086,7 @@ if(field.NeedNativeMake) {
         #line hidden
         
         #line 199 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("    SLAPS_TO_GRPC(in->");
+this.Write("    SlapsToGrpc(in->");
 
         
         #line default
@@ -2127,7 +2127,7 @@ this.Write("());\r\n");
         #line hidden
         
         #line 201 "F:\Git\protoc-gen-turbolink\Template\MarshalingCPP.tt"
-this.Write("    SLAPS_TO_GRPC(&(in->");
+this.Write("    SlapsToGrpc(&(in->");
 
         
         #line default

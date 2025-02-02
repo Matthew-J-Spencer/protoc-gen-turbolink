@@ -46,7 +46,7 @@ private void ConvertFieldFromTurboLinkToGrpc(GrpcMessageField field, string getF
 private void GenerateMessageMarshalingDefine(GrpcMessage message)
 {
 #>
-void GRPC_TO_SLAPS(const ::<#=message.GrpcName#>* in, <#=message.Name#>* out)
+void GrpcToSlaps(const ::<#=message.GrpcName#>* in, <#=message.Name#>* out)
 {
 <#+
     foreach(GrpcMessageField field in message.Fields)
@@ -60,12 +60,12 @@ if(field is GrpcMessageField_Map) {
     for (const auto& item : in-><#=mapField.FieldGrpcName#>()) {
 <#+if(field.NeedNativeMake) { #>
         <#=mapField.ValueField.FieldType#> field;
-        GRPC_TO_SLAPS(&item.second, &field);
+        GrpcToSlaps(&item.second, &field);
         out-><#=mapField.FieldName#>.Add(StringCast<TCHAR>((const UTF8CHAR*)item.first.c_str()).Get(), MakeShareable(new <#=mapField.ValueField.FieldType#>(field)));
 <#+} else { #>
         auto& value = out-><#=mapField.FieldName#>.Add(<#+ConvertFieldFromGrpcToTurboLink(mapField.KeyField, "item.first");#>);
 <#+if(mapField.ValueField.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-        GRPC_TO_SLAPS(&item.second, &value);
+        GrpcToSlaps(&item.second, &value);
 <#+} else {#>
         value = <#+ConvertFieldFromGrpcToTurboLink(mapField.ValueField, "item.second");#>;
 <#+}}#>
@@ -78,10 +78,10 @@ if(field is GrpcMessageField_Map) {
     for (int i=0; i<in-><#=repeatedField.FieldGrpcName#>_size(); ++i) {
 <#+if(field.NeedNativeMake) { #>
         <#=repeatedField.ItemField.FieldType#> field;
-        GRPC_TO_SLAPS(&(in-><#=repeatedField.FieldGrpcName#>(i)), &field);
+        GrpcToSlaps(&(in-><#=repeatedField.FieldGrpcName#>(i)), &field);
         out-><#=repeatedField.FieldName#>.Add(MakeShareable(new <#=repeatedField.ItemField.FieldType#>(field)));
 <#+} else if(field.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-        GRPC_TO_SLAPS(&(in-><#=repeatedField.FieldGrpcName#>(i)), &(out-><#=repeatedField.FieldName#>.AddZeroed_GetRef()));
+        GrpcToSlaps(&(in-><#=repeatedField.FieldGrpcName#>(i)), &(out-><#=repeatedField.FieldName#>.AddZeroed_GetRef()));
 <#+} else { string getField = "in->"+repeatedField.FieldGrpcName+"(i)";  #>
         out-><#=repeatedField.FieldName#>.Add(<#+ConvertFieldFromGrpcToTurboLink(repeatedField.ItemField, getField);#>);
 <#+}#>
@@ -101,12 +101,12 @@ foreach(GrpcMessageField fieldOfOneofMessage in oneofMessage.Fields)
 <#+if(fieldOfOneofMessage.NeedNativeMake) { #>
     {
         <#=fieldOfOneofMessage.FieldType#> field;
-        GRPC_TO_SLAPS(&(in-><#=fieldOfOneofMessage.FieldGrpcName#>()), &field);
+        GrpcToSlaps(&(in-><#=fieldOfOneofMessage.FieldGrpcName#>()), &field);
         out-><#=field.FieldName#>.<#=fieldOfOneofMessage.FieldName#>=MakeShareable(new <#=fieldOfOneofMessage.FieldType#>(field));
         out-><#=field.FieldName#>.<#=field.FieldName#>Case = <#=oneofMessage.OneofEnum.Name#>::<#=fieldOfOneofMessage.FieldName#>;
     }
 <#+}else if(fieldOfOneofMessage.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-        GRPC_TO_SLAPS(&(in-><#=fieldOfOneofMessage.FieldGrpcName#>()), &(out-><#=field.FieldName#>.<#=fieldOfOneofMessage.FieldName#>));
+        GrpcToSlaps(&(in-><#=fieldOfOneofMessage.FieldGrpcName#>()), &(out-><#=field.FieldName#>.<#=fieldOfOneofMessage.FieldName#>));
         out-><#=field.FieldName#>.<#=field.FieldName#>Case = <#=oneofMessage.OneofEnum.Name#>::<#=fieldOfOneofMessage.FieldName#>;
 <#+} else { string getField = "in->"+fieldOfOneofMessage.FieldGrpcName+"()"; #>
         out-><#=field.FieldName#>.<#=fieldOfOneofMessage.FieldName#>=<#+ConvertFieldFromGrpcToTurboLink(fieldOfOneofMessage, getField);#>;
@@ -121,11 +121,11 @@ foreach(GrpcMessageField fieldOfOneofMessage in oneofMessage.Fields)
 <#+if(field.NeedNativeMake) { #>
     {
         <#=field.FieldType#> field;
-        GRPC_TO_SLAPS(&(in-><#=field.FieldGrpcName#>()), &field);
+        GrpcToSlaps(&(in-><#=field.FieldGrpcName#>()), &field);
         out-><#=field.FieldName#> = MakeShareable(new <#=field.FieldType#>(field));
     }
 <#+}else if(field.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-    GRPC_TO_SLAPS(&(in-><#=field.FieldGrpcName#>()), &(out-><#=field.FieldName#>));
+    GrpcToSlaps(&(in-><#=field.FieldGrpcName#>()), &(out-><#=field.FieldName#>));
 <#+} else { string getField = "in->"+field.FieldGrpcName+"()"; #>
     out-><#=field.FieldName#>=<#+ConvertFieldFromGrpcToTurboLink(field, getField);#>;
 <#+}#>
@@ -135,7 +135,7 @@ foreach(GrpcMessageField fieldOfOneofMessage in oneofMessage.Fields)
 #>
 }
 
-void SLAPS_TO_GRPC(const <#=message.Name#>* in, ::<#=message.GrpcName#>* out)
+void SlapsToGrpc(const <#=message.Name#>* in, ::<#=message.GrpcName#>* out)
 {
 <#+
     foreach(GrpcMessageField field in message.Fields)
@@ -149,11 +149,11 @@ if(field is GrpcMessageField_Map) {
     for (const auto& item : in-><#=mapField.FieldName#>) {
 <#+if(field.NeedNativeMake) { #>
         <#=mapField.ValueField.FieldGrpcType#> value;
-        SLAPS_TO_GRPC(item.Value.Get(), &value);
+        SlapsToGrpc(item.Value.Get(), &value);
         (*(out->mutable_<#=mapField.FieldGrpcName#>()))[<#+ConvertFieldFromTurboLinkToGrpc(mapField.KeyField, "item.Key");#>] = value;
 <#+} else if(mapField.ValueField.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
         <#=mapField.ValueField.FieldGrpcType#> value;
-        SLAPS_TO_GRPC(&item.Value, &value);
+        SlapsToGrpc(&item.Value, &value);
         (*(out->mutable_<#=mapField.FieldGrpcName#>()))[<#+ConvertFieldFromTurboLinkToGrpc(mapField.KeyField, "item.Key");#>] = value;
 <#+}else {#>
         (*(out->mutable_<#=mapField.FieldGrpcName#>()))[<#+ConvertFieldFromTurboLinkToGrpc(mapField.KeyField, "item.Key");#>] = <#+ConvertFieldFromTurboLinkToGrpc(mapField.ValueField, "item.Value");#>;
@@ -162,9 +162,9 @@ if(field is GrpcMessageField_Map) {
 <#+} else if(field is GrpcMessageField_Repeated) { #>
     for(const auto& value : in-><#=field.FieldName#>) {
 <#+if(field.NeedNativeMake) { #>
-        SLAPS_TO_GRPC(value.Get(), out->add_<#=field.FieldGrpcName#>());
+        SlapsToGrpc(value.Get(), out->add_<#=field.FieldGrpcName#>());
 <#+} else if(field.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-        SLAPS_TO_GRPC(&value, out->add_<#=field.FieldGrpcName#>());
+        SlapsToGrpc(&value, out->add_<#=field.FieldGrpcName#>());
 <#+} else {#>
         out->add_<#=field.FieldGrpcName#>(<#+ConvertFieldFromTurboLinkToGrpc(field, "value");#>);
 <#+}#>
@@ -183,9 +183,9 @@ foreach(GrpcMessageField fieldOfOneofMessage in oneofMessage.Fields)
 #>
     case <#=oneofMessage.OneofEnum.Name#>::<#=fieldOfOneofMessage.FieldName#>:
 <#+if(fieldOfOneofMessage.NeedNativeMake) { #>
-        SLAPS_TO_GRPC(<#=getField#>.Get(), out->mutable_<#=fieldOfOneofMessage.FieldGrpcName#>());
+        SlapsToGrpc(<#=getField#>.Get(), out->mutable_<#=fieldOfOneofMessage.FieldGrpcName#>());
 <#+} else if(fieldOfOneofMessage.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-        SLAPS_TO_GRPC(&(<#=getField#>), out->mutable_<#=fieldOfOneofMessage.FieldGrpcName#>());
+        SlapsToGrpc(&(<#=getField#>), out->mutable_<#=fieldOfOneofMessage.FieldGrpcName#>());
 <#+} else { #>
         out->set_<#=fieldOfOneofMessage.FieldGrpcName#>(<#+ConvertFieldFromTurboLinkToGrpc(fieldOfOneofMessage, getField);#>);
 <#+}#>
@@ -196,9 +196,9 @@ foreach(GrpcMessageField fieldOfOneofMessage in oneofMessage.Fields)
     }
 <#+} else { #>
 <#+if(field.NeedNativeMake) { #>
-    SLAPS_TO_GRPC(in-><#=field.FieldName#>.Get(), out->mutable_<#=field.FieldGrpcName#>());
+    SlapsToGrpc(in-><#=field.FieldName#>.Get(), out->mutable_<#=field.FieldGrpcName#>());
 <#+} else if(field.FieldDesc.Type==FieldDescriptorProto.Types.Type.Message) { #>
-    SLAPS_TO_GRPC(&(in-><#=field.FieldName#>), out->mutable_<#=field.FieldGrpcName#>());
+    SlapsToGrpc(&(in-><#=field.FieldName#>), out->mutable_<#=field.FieldGrpcName#>());
 <#+} else { string getField = "in->"+field.FieldName; #>
     out-><#=fieldsetName#>(<#+ConvertFieldFromTurboLinkToGrpc(field, getField);#>);
 <#+}#>

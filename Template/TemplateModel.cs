@@ -1,4 +1,5 @@
-﻿using Google.Protobuf.Reflection;
+﻿using System.Collections.Generic;
+using Google.Protobuf.Reflection;
 
 namespace protoc_gen_turbolink.Template
 {
@@ -85,5 +86,10 @@ namespace protoc_gen_turbolink.Template
         private GrpcServiceFile s;
         private GenerateParam g;
         public NodeCPP(GrpcServiceFile _s, GenerateParam _g) { s = _s; g = _g; }
+    }
+    partial class TestServiceH
+    {
+        private List<GrpcServiceFile> s;
+        public TestServiceH(List<GrpcServiceFile> _s) { s = _s;  }
     }
 }
