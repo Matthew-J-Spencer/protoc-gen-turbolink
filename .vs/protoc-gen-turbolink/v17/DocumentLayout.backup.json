@@ -3,44 +3,12 @@
   "WorkspaceRootPath": "F:\\Git\\protoc-gen-turbolink\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\nodeh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\nodeh.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\nodecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\nodecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\turbolinkgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:turbolinkgenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\turbolinkcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:turbolinkcollection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\turbolinkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:turbolinkutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\templatemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\protobufplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:protobufplugin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|F:\\Git\\protoc-gen-turbolink\\template\\messagecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\messagecpp.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\contexth.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\contexth.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -50,93 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "NodeH.tt",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\NodeH.tt",
-              "RelativeDocumentMoniker": "Template\\NodeH.tt",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\NodeH.tt",
-              "RelativeToolTip": "Template\\NodeH.tt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-19T11:58:08.4Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "NodeCPP.tt",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\NodeCPP.tt",
-              "RelativeDocumentMoniker": "Template\\NodeCPP.tt",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\NodeCPP.tt",
-              "RelativeToolTip": "Template\\NodeCPP.tt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-19T11:57:01.751Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "TemplateModel.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\TemplateModel.cs",
-              "RelativeDocumentMoniker": "Template\\TemplateModel.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\TemplateModel.cs",
-              "RelativeToolTip": "Template\\TemplateModel.cs",
-              "ViewState": "AgIAABQAAAAAAAAAAAAIwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:29:32.065Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Program.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:29:28.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProtobufPlugin.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\ProtobufPlugin.cs",
-              "RelativeDocumentMoniker": "ProtobufPlugin.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\ProtobufPlugin.cs",
-              "RelativeToolTip": "ProtobufPlugin.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:29:28.121Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "TurboLinkCollection.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\TurboLinkCollection.cs",
-              "RelativeDocumentMoniker": "TurboLinkCollection.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\TurboLinkCollection.cs",
-              "RelativeToolTip": "TurboLinkCollection.cs",
-              "ViewState": "AgIAABACAAAAAAAAAAAUwH4BAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:28:51.024Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "TurboLinkGenerator.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\TurboLinkGenerator.cs",
-              "RelativeDocumentMoniker": "TurboLinkGenerator.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\TurboLinkGenerator.cs",
-              "RelativeToolTip": "TurboLinkGenerator.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAowDkAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:28:09.227Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -145,34 +28,23 @@
               "RelativeDocumentMoniker": "Template\\MessageH.tt",
               "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\MessageH.tt",
               "RelativeToolTip": "Template\\MessageH.tt",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAwwI0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHEAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-13T11:28:04.087Z",
+              "WhenOpened": "2025-05-08T04:12:47.065Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MessageCPP.tt",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\MessageCPP.tt",
-              "RelativeDocumentMoniker": "Template\\MessageCPP.tt",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\MessageCPP.tt",
-              "RelativeToolTip": "Template\\MessageCPP.tt",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ContextH.tt",
+              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\ContextH.tt",
+              "RelativeDocumentMoniker": "Template\\ContextH.tt",
+              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\ContextH.tt",
+              "RelativeToolTip": "Template\\ContextH.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
-              "WhenOpened": "2025-01-13T11:27:53.982Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "TurboLinkUtils.cs",
-              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\TurboLinkUtils.cs",
-              "RelativeDocumentMoniker": "TurboLinkUtils.cs",
-              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\TurboLinkUtils.cs",
-              "RelativeToolTip": "TurboLinkUtils.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAowDwAAAA7AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-13T11:25:11.203Z"
+              "WhenOpened": "2025-05-08T04:10:40.712Z",
+              "EditorCaption": ""
             }
           ]
         }

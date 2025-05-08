@@ -1,12 +1,54 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "F:\\Git\\protoc-gen-turbolink\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\messageh.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|f:\\git\\protoc-gen-turbolink\\template\\contexth.tt||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{F81F5F0C-C258-4DBD-AABB-CDD9730D171D}|protoc-gen-turbolink.csproj|solutionrelative:template\\contexth.tt||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MessageH.tt",
+              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\MessageH.tt",
+              "RelativeDocumentMoniker": "Template\\MessageH.tt",
+              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\MessageH.tt",
+              "RelativeToolTip": "Template\\MessageH.tt",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAAAHEAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-08T04:12:47.065Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContextH.tt",
+              "DocumentMoniker": "F:\\Git\\protoc-gen-turbolink\\Template\\ContextH.tt",
+              "RelativeDocumentMoniker": "Template\\ContextH.tt",
+              "ToolTip": "F:\\Git\\protoc-gen-turbolink\\Template\\ContextH.tt",
+              "RelativeToolTip": "Template\\ContextH.tt",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003109|",
+              "WhenOpened": "2025-05-08T04:10:40.712Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

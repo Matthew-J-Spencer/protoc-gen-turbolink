@@ -330,7 +330,7 @@ namespace protoc_gen_turbolink.Template
             
             #line default
             #line hidden
-            this.Write("\r\n    UPROPERTY()\r\n    ");
+            this.Write("\r\n    UPROPERTY(EditAnywhere)\r\n    ");
             
             #line 119 "F:\Git\protoc-gen-turbolink\Template\MessageH.tt"
             this.Write(this.ToStringHelper.ToStringWithCulture(field.FieldType));

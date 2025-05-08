@@ -115,7 +115,7 @@ struct <#= message.Name #> : public FGrpcMessage
             {
 #>
 
-    UPROPERTY()
+    UPROPERTY(EditAnywhere)
     <#= field.FieldType #> <#= field.FieldName #><#= field.FieldDefaultValue #>;
 <#
             }
